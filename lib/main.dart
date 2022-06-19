@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_spark/screens/code_editor/scaffold.dart';
+import 'screens/code_editor/code_editor.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -12,7 +10,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'FlutterSpark',
-      home: CodeEditor(),
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: CodeEditor(),
+      ),
     );
   }
 }
